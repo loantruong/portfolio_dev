@@ -8,6 +8,7 @@ body {
   text-align: center;
   /*text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);*/
 }
+/** TEMPLATE **/
 .site-wrapper {
   display: table;
   width: 100%;
@@ -25,36 +26,64 @@ body {
 .inner {
   padding: 2rem;
 }
-.masthead {
-  margin-bottom: 2rem;
-}
-.masthead-brand {
-  margin-bottom: 0;
-}
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: bold;
-  color: rgba(255,255,255,.5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
 
 /** MENU **/
+.nav-principal { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+  background: #222222; 
+  display: inline-block; 
+  height: 100vh; 
+  position: absolute; 
+}
+.nav-principal li { 
+  cursor: pointer; 
+  margin-bottom: -1px; 
+  height: 60px; 
+  line-height: 60px; 
+  font-size: 18px; 
+  font-family: 'Roboto Slab', 
+  serif; color: #ffffff; 
+}
+.nav-principal li div, .nav-principal li i { 
+  position: absolute; 
+  text-align: center; 
+}
+.nav-principal li div { 
+  margin-left: 60px; 
+  text-align: center; 
+  width: 160px; 
+}
+.nav-principal li i{ 
+  line-height: 60px; 
+  width: 60px; 
+  z-index: 9; 
+  background: #222222; 
+}
+.nav-principal li div { 
+  display: none; 
+  z-index: 1; 
+  background: #1cd5ed; 
+}
 
-/** TEMPLATE **/
+.nav-principal li:hover > div { 
+  display: inline-block; 
+}
+.nav-principal li:hover i { 
+  background: #1cd5ed; 
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  right: 0 !important;
+}
+
+/** TEMPLATE PAGE**/
 .content-page{
   width: 30%;
+  margin-left: 10%;
 }
 .small-text{
   font-weight: 100;
@@ -118,10 +147,7 @@ body {
   85%  {opacity: 0.7;}
   100% {opacity: 0.7;}
 }
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
+@media (min-width: 768px) {
   .nav-masthead {
     float: right;
   }
@@ -134,7 +160,7 @@ body {
   font-weight: bold;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -151,9 +177,9 @@ body {
   }
 }
 
-@media (min-width: 62em) {
+@media (min-width: 992px) {
   .masthead,
   .cover-container {
-    width: 80%;
+    width: 90%;
   }
 }
