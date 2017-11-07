@@ -2,11 +2,11 @@
 
 angular.module('cvDev', ['ui.router'])
 
-  .config(($stateProvider, $urlRouterProvider) => {
+  .config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     $stateProvider
       .state('hello', {
         url: '/hello',
-        component: 'js/components/intro',
+        component: 'intro',
       })
       .state('about', {
         url: '/about',
@@ -21,5 +21,7 @@ angular.module('cvDev', ['ui.router'])
         url: '/contact',
       });
       
-      $urlRouterProvider.otherwise('/hello'); 
+      $urlRouterProvider.otherwise('/hello');
+      $locationProvider.html5Mode(true);
+      $locationProvider.hashPrefix('!');
   });

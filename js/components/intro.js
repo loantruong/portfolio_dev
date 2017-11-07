@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('cvDev')
-  .component('hello', {
-    templateUrl: 'js/intro.html'
-  })
+  .component('intro', {
+    templateUrl: 'js/components/intro.html'
+  });
