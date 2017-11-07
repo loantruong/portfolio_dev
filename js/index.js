@@ -6,19 +6,23 @@ angular.module('cvDev', ['ui.router'])
     $stateProvider
       .state('hello', {
         url: '/hello',
-        component: 'intro',
+        component: 'intro'
       })
       .state('about', {
         url: '/about',
+        component: 'about'
       })
       .state('skill', {
         url: '/skill',
+        component: 'skill'
       })
       .state('work', {
         url: '/work',
+        component: 'work'
       })
       .state('contact', {
         url: '/contact',
+        component: 'contact'
       });
       
       $urlRouterProvider.otherwise('/hello');
