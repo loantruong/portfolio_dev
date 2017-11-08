@@ -3,7 +3,7 @@
 angular.module('cvDev')
   .component('intro', {
     templateUrl: 'js/components/intro.html',
-    import: 'js/compo'
+    //import: 'js/animation/demo-1.js'
   })
   .component('about', {
     templateUrl: 'js/components/about.html'
