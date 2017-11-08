@@ -26,6 +26,6 @@ angular.module('cvDev', ['ui.router'])
       });
       
       $urlRouterProvider.otherwise('/hello');
-      $locationProvider.html5Mode(true);
-      $locationProvider.hashPrefix('!');
+      //$locationProvider.html5Mode(true);
+      //$locationProvider.hashPrefix('!');
   });
